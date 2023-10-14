@@ -138,11 +138,13 @@
           .then((data) => {
             if (data.post_id) {
               // Запись размещена
+              console.log ("ok");
               myGameInstance.SendMessage('ConnectJs', 'ResponseOk');
             }
           })
           .catch((error) => {
             // Ошибка
+            console.log(error);
             myGameInstance.SendMessage('ConnectJs', 'ResponseError');
           });
       }
